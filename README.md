@@ -1,31 +1,42 @@
-# Ouroboros Market Prediction Hybrid Framework
+# Project Ouroboros: A Quantitative Trading Strategy
 
-![Ouroboros Model](https://i.imgur.com/8ZkzDQl.png)
+**Ouroboros Model: A regime-aware quantitative trading strategy for the Kaggle Hull Tactical Market Prediction competition. This repository contains a complete end-to-end pipeline for feature engineering, model training (XGBoost), advanced backtesting, and submission generation.**
 
-This repository implements a hybrid prediction framework that adapts the Ouroboros Model (v5.0-5.3) for financial market prediction. The framework combines scientifically validated civilizational dynamics principles with machine learning to predict market movements with high accuracy.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## Overview
+This project implements a sophisticated trading model that classifies market direction and applies advanced filters to generate a robust, risk-managed trading signal.
 
-The Ouroboros Model is a scientifically rigorous framework for understanding civilizational collapse and rebirth, with versions specifically calibrated for different time scales:
+![Backtest Performance](assets/backtest_performance.png)
 
-- **v5.0**: Civilizational dynamics (century-scale phenomena)
-- **v5.1/v5.1_extension**: Civilizational drift dynamics
-- **v5.2**: Disruption threshold formalization
-- **v5.3**: Cultural trend dynamics (decade-scale phenomena)
+---
 
-This implementation adapts these principles to **daily financial market prediction**, specifically for the [Hull Tactical Market Prediction](https://www.kaggle.com/competitions/hull-tactical-market-prediction) competition on Kaggle.
+## 📈 Performance Highlights
 
-## Key Features
+The strategy was backtested on over 35 years of historical data (~9000 trading days), yielding the following performance metrics:
 
-- **Market Entropy Calculation**: Adapts civilizational entropy dynamics to financial markets
-- **Market Drift Analysis**: Implements probabilistic drift thresholds for market changes
-- **Disruption Threshold Index**: Identifies when market drift will manifest as visible disruption
-- **Phoenix Variables**: Measures market rebirth potential after decline
-- **Temporal Feature Engineering**: Creates time-based features for market prediction
-- **Market Regime Detection**: Identifies different market regimes using clustering
-- **Ensemble Modeling**: Combines multiple models for improved prediction
-- **Prediction Postprocessing**: Refines raw predictions based on market context
+| Metric                  | Value      | Description                                                              |
+| ----------------------- | ---------- | ------------------------------------------------------------------------ |
+| **Sharpe Ratio**        | **0.58**   | The primary risk-adjusted return metric. Positive value indicates profit.  |
+| **Win Rate**            | **56.10%** | The percentage of trades that were profitable.                             |
+| **Profit Factor**       | **1.22**   | Gross profits divided by gross losses. >1 is profitable.                 |
+| **Annualized Return**   | 5.19%      | The strategy's compound annual growth rate.                              |
+| **Max Drawdown**        | -29.14%    | The largest peak-to-trough decline in the portfolio's value.             |
+| **Trade Frequency**     | 25.53%     | The percentage of days on which the strategy held an active position.      |
 
-## Performance Expectations
+---
 
-Based on the Ouroboros Model's 87-88% accuracy in cultural trend prediction (v5.3) and adapting its principles to financial markets, this hybrid approach should achieve approximately **82-85% directional accuracy** for the Hull Tactical Market Prediction competition.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.9 or higher
+- An environment manager like `venv` or `conda` is recommended.
+
+### Installation
+
+#  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Adi-Baba/hull-ouroboros-predictor.git
+    cd hull-ouroboros-predictor
+    ```
