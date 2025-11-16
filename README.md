@@ -7,7 +7,6 @@
 
 This project implements a sophisticated trading model that classifies market direction and applies advanced filters to generate a robust, risk-managed trading signal.
 
-![Backtest Performance](assets/backtest_performance.png)
 
 ---
 
