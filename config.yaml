@@ -1,0 +1,74 @@
+data:
+  data_dir: "data"
+  train_file: "train.csv"
+  test_file: "test.csv"
+  sample_submission_file: "sample_submission.csv"
+
+features:
+  entropy_window: 63
+  drift_window: 126
+  disruption_window: 21
+  max_history: 252
+  feature_prefixes:
+    - "D"
+    - "E"
+    - "I"
+    - "M"
+    - "P"
+    - "S"
+    - "V"
+  target_column: "forward_returns"
+  date_column: "timestamp"
+  id_column: "row_id"
+
+model:
+  xgb_params:
+    objective: "reg:squarederror"
+    eval_metric: "rmse"
+    learning_rate: 0.03
+    max_depth: 8
+    subsample: 0.85
+    colsample_bytree: 0.8
+    n_estimators: 1500
+    early_stopping_rounds: 100
+    random_state: 42
+  model_dir: "models"
+  model_file: "ouroboros_hybrid_model.pkl"
+
+training:
+  validation_split: 0.2
+  n_splits: 5
+  hyperparameter_trials: 50
+
+prediction:
+  output_dir: "submissions"
+  confidence_threshold: 0.65
+  min_prediction: -0.05
+  max_prediction: 0.05
+
+logging:
+  log_dir: "logs"
+  log_file: "ourobos.log"
+  verbose: true
+
+core:
+  critical_entropy: 0.45
+  imperceptibility_threshold: 0.015
+  rebirth_threshold: 0.25
+  disruption_threshold: -0.2
+  pillar_weights:
+    volatility: 0.25
+    liquidity: 0.20
+    sentiment: 0.20
+    macro: 0.15
+    technical: 0.10
+    sector_rotation: 0.05
+    global_risk: 0.05
+
+postprocessing:
+  confidence_threshold: 0.65
+  volatility_adjustment: true
+  regime_adjustment: true
+  disruption_adjustment: true
+  min_prediction: -0.05
+  max_prediction: 0.05
