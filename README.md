@@ -12,16 +12,18 @@ This project implements a sophisticated trading model that classifies market dir
 
 ## 📈 Performance Highlights
 
-The strategy was backtested on over 35 years of historical data (~9000 trading days), yielding the following performance metrics:
+The strategy was backtested on over 35 years of historical data (9020 trading days), yielding the following performance metrics:
 
 | Metric                  | Value      | Description                                                              |
 | ----------------------- | ---------- | ------------------------------------------------------------------------ |
-| **Sharpe Ratio**        | **0.58**   | The primary risk-adjusted return metric. Positive value indicates profit.  |
-| **Win Rate**            | **56.10%** | The percentage of trades that were profitable.                             |
-| **Profit Factor**       | **1.22**   | Gross profits divided by gross losses. >1 is profitable.                 |
-| **Annualized Return**   | 5.19%      | The strategy's compound annual growth rate.                              |
-| **Max Drawdown**        | -29.14%    | The largest peak-to-trough decline in the portfolio's value.             |
-| **Trade Frequency**     | 25.53%     | The percentage of days on which the strategy held an active position.      |
+| **Total Return**        | **231.53%**| The total return of the strategy over the entire backtest period.        |
+| **Annualized Return**   | **3.41%**  | The strategy's compound annual growth rate.                              |
+| **Annualized Volatility**| **6.35%**  | The annualized standard deviation of the strategy's returns.             |
+| **Sharpe Ratio**        | **0.56**   | The primary risk-adjusted return metric. Positive value indicates profit.  |
+| **Max Drawdown**        | **-20.47%**| The largest peak-to-trough decline in the portfolio's value.             |
+| **Win Rate**            | **56.88%** | The percentage of trades that were profitable.                             |
+| **Profit Factor**       | **1.31**   | Gross profits divided by gross losses. >1 is profitable.                 |
+| **Trade Frequency**     | **13.45%** | Percentage of days with an active position (1213 trades over 9020 days). |
 
 ---
 
@@ -34,7 +36,7 @@ The strategy was backtested on over 35 years of historical data (~9000 trading d
 
 ### Installation
 
-#  **Clone the repository:**
+#   **Clone the repository:**
     ```bash
     git clone https://github.com/Adi-Baba/hull-ouroboros-predictor.git
     cd hull-ouroboros-predictor
